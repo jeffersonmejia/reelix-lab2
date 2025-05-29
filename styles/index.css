@@ -76,12 +76,14 @@ nav li:nth-child(2) a {
   color: var(--primary-bg-color);
 }
 video {
-  width: 100%;
   position: absolute;
-  top: 0;
+  top: -9%;
   left: 0;
-  right: 0;
-  transform: translateY(-5%);
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
 }
 
 .counter {

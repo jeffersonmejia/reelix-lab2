@@ -20,8 +20,9 @@ function hiddeVideo() {
 }
 
 $video.addEventListener('canplaythrough', () => {
-  $video.muted = true
-  $video.play()
-  $video.muted = false
-  hiddeVideo()
+  setTimeout(() => {
+    $video.play()
+    $video.muted = false
+    hiddeVideo()
+  }, 1000)
 })
