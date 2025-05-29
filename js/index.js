@@ -24,5 +24,5 @@ $video.addEventListener('canplaythrough', () => {
     $video.play()
     $video.muted = false
     hiddeVideo()
-  }, 1000)
+  }, 3000)
 })
