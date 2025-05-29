@@ -1,0 +1,34 @@
+main {
+  display: grid;
+  grid-template-columns: 60% 30%;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+img {
+  height: 100%;
+}
+form {
+  margin: auto;
+  margin-left: 6rem;
+  width: 100%;
+  max-width: 350px;
+  margin-top: 3rem;
+  padding: 1.5rem;
+  border-radius: 4px;
+  background-color: rgb(39, 39, 39);
+}
+
+form legend {
+  padding-bottom: 1rem;
+}
+
+form fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form input[type='submit'] {
+  cursor: pointer;
+}

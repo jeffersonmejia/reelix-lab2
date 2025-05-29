@@ -1,0 +1,56 @@
+main h2 {
+  padding: 0;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  font-size: 3rem;
+}
+section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-left: 0;
+}
+
+hgroup {
+  grid-column: 1/3;
+}
+
+hgroup + button {
+  grid-column: 3/-1;
+  border: none;
+  height: 100%;
+  text-align: right;
+  display: flex;
+  justify-content: end;
+  background-color: transparent;
+  padding-top: 2rem;
+}
+
+hgroup + button a {
+  color: #0ceb8b;
+  text-decoration: none;
+  height: fit-content;
+}
+
+main section {
+  gap: 1rem;
+}
+
+.movie-box {
+  width: 100%;
+  padding-left: 0;
+  margin-left: 0;
+  height: 100%;
+}
+
+.movie-box:nth-child(3) {
+  grid-column: 1/3;
+}
+
+.movie-box:nth-child(6) {
+  grid-column: 2/-1;
+}
+
+.movie-box:nth-child(7) {
+  grid-column: 1/-1;
+}

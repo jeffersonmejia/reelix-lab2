@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reelix - signup</title>
+    <link
+      rel="shortcut icon"
+      href="img/icons/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/signup.css" />
+  </head>
+  <body>
+    <main>
+      <figure>
+        <img src="img/cover-login.png" alt="cover login" />
+        <figcaption>
+          <ul>
+            <li></li>
+          </ul>
+        </figcaption>
+      </figure>
+      <form action="./" method="POST">
+        <fieldset>
+          <legend>Registro</legend>
+
+          <input
+            type="text"
+            name="name"
+            placeholder="Nombre completo"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Correo electrónico"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Contraseña"
+            required
+          />
+          <input
+            type="password"
+            name="confirm-password"
+            placeholder="Confirmar contraseña"
+            required
+          />
+          <select name="" id="">
+            <option value="">Selecciona tu pais</option>
+            <option value="">Ecuador</option>
+            <option value="">Peru</option>
+            <option value="">Colombia</option>
+            <option value="">Chile</option>
+          </select>
+          <fieldset class="fieldset-gender">
+            <h4>Género</h4>
+            <div class="input-group">
+              <input type="radio" name="gender" id="" />
+              <label for="">Masculino</label>
+            </div>
+            <div class="input-group">
+              <input type="radio" name="gender" id="" />
+              <label for="">Femenino</label>
+            </div>
+          </fieldset>
+          <div class="input-group">
+            <label for="">Color del perfil</label>
+            <input type="color" name="" id="" />
+          </div>
+          <div class="input-group">
+            <label for="">Fecha de nacimiento</label>
+            <input type="date" name="" id="" />
+          </div>
+          <div class="input-group input-group-profile-pic">
+            <label for="">Foto de perfil</label>
+            <input type="file" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" name="terms" required />
+            <span>Acepto los <a href="#">términos y condiciones</a></span>
+          </div>
+          <input type="submit" value="Registrarse" />
+          <a href="/">Volver</a>
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>
