@@ -55,9 +55,6 @@ function toogleLogo() {
       hiddeVideo()
     }
     enableEvents()
-    if (!isiPhone) {
-      window.scrollBy(0, 1)
-    }
   }, 5500)
 }
 
