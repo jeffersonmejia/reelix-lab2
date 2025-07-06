@@ -16,20 +16,40 @@
       href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/reset_form.css" />
     <link rel="stylesheet" href="styles/signup.css" />
   </head>
   <body>
     <main>
-      <figure>
-        <img src="img/cover-login.png" alt="cover login" />
-        <figcaption>
-          <ul>
-            <li></li>
-          </ul>
-        </figcaption>
-      </figure>
-      <form action="./" method="POST">
+      <section class="gallery">
+        <!-- Primera fila: 1 imagen -->
+        <div class="gallery-row gallery-row--single">
+          <figure class="gallery__picture">
+            <img src="img/movies/Venom.jpg" class="gallery__img" />
+          </figure>
+        </div>
+
+        <!-- Segunda fila: 3 imágenes -->
+        <div class="gallery-row gallery-row--triple">
+          <figure class="gallery__picture">
+            <img src="img/movies/Guason.jpg" class="gallery__img" />
+          </figure>
+          <figure class="gallery__picture">
+            <img src="img/movies/maldiccion.jpg" class="gallery__img" />
+          </figure>
+          <figure class="gallery__picture">
+            <img src="img/movies/Moana.jpg" class="gallery__img" />
+          </figure>
+        </div>
+
+        <!-- Tercera fila: 1 imagen -->
+        <div class="gallery-row gallery-row--single">
+          <figure class="gallery__picture">
+            <img src="img/movies/spiderman.jpg" class="gallery__img" />
+          </figure>
+        </div>
+      </section>
+      <form action="" method="POST">
         <fieldset>
           <legend>Registro</legend>
 
