@@ -276,7 +276,7 @@ video {
 
 .counter {
   position: absolute;
-  z-index: 999;
+  z-index: 998;
   right: 3vh;
   bottom: 3vh;
 }
@@ -407,6 +407,21 @@ main h2 {
   width: 70px;
   display: block;
   text-align: center;
+}
+video.video-pip {
+  position: fixed !important;
+  width: clamp(280px, 35vw, 380px);
+  height: 200px;
+  bottom: 2vh;
+  right: 2vw;
+  top: auto !important;
+  left: auto !important;
+  z-index: 999 !important;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease-in-out;
+  background-color: #000;
 }
 
 footer {
@@ -671,6 +686,7 @@ footer {
   .plans-section h2 {
     padding-bottom: 3.5rem;
   }
+
   footer {
     padding: 2rem 0;
   }

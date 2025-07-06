@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reelix - Películas</title>
+    <link
+      rel="shortcut icon"
+      href="../img/icons/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansation:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/for_you.css" />
+    <link rel="stylesheet" href="../styles/movies.css" />
+  </head>
+  <body>
+    <div class="header">
+      <img src="../img/icons/logo.svg" alt="Reelix Logo" class="logo" />
+      <div class="nav nav-transformed">
+        <a href="for_you.html">Para ti</a>
+        <a href="favorites.html">Favoritas</a>
+        <a href="#">Películas</a>
+        <a href="series.html">Series</a>
+        <a href="profile.html">Perfil</a>
+      </div>
+      <a href="../" class="ingreso">Cerrar sesión</a>
+    </div>
+
+    <div class="content" id="movie-list">
+      <h2>PELÍCULAS</h2>
+      <p class="subtitulo">Catálogo completo de películas</p>
+      <div class="grid" id="grid">
+        <div class="item" onclick="showDetails(0)">
+          <img src="../img/movies/Guason.jpg" alt="Guasón" />
+          <p>Guasón</p>
+        </div>
+        <div class="item" onclick="showDetails(1)">
+          <img src="../img/movies/Moana.jpg" alt="Moana" />
+          <p>Moana</p>
+        </div>
+        <div class="item" onclick="showDetails(2)">
+          <img src="../img/movies/maldiccion.jpg" alt="Maldición" />
+          <p>Maldición</p>
+        </div>
+        <div class="item" onclick="showDetails(3)">
+          <img src="../img/movies/Mono.jpg" alt="Mono" />
+          <p>Mono</p>
+        </div>
+        <div class="item" onclick="showDetails(4)">
+          <img src="../img/series/BlackMirror.jpg" alt="BlackMirror " />
+          <p>Black Mirror</p>
+        </div>
+        <div class="item" onclick="showDetails(5)">
+          <img src="../img/series/BreakingBad.jpg" alt="Breaking Bad " />
+          <p>Breaking Bad</p>
+        </div>
+
+        <div class="item" onclick="showDetails(6)">
+          <img src="../img/series/cobraKai.jpg" alt="Cobra Kai " />
+          <p>Cobra Kai</p>
+        </div>
+
+        <div class="item" onclick="showDetails(7)">
+          <img src="../img/series/doctorstrance.jpg" alt="doctor strance " />
+          <p>Doctor Strance</p>
+        </div>
+
+        <div class="item" onclick="showDetails(8)">
+          <img src="../img/series/elextraño.jpg" alt="El Extraño " />
+          <p>El Extraño</p>
+        </div>
+
+        <div class="item" onclick="showDetails(9)">
+          <img src="../img/series/GameofThrones.jpg" alt="Game of Thrones " />
+          <p>Game of Thrones</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="movie-details" id="movie-details" style="display: none">
+      <div class="movie-card">
+        <img id="detail-img" src="" alt="Poster" />
+        <div class="movie-info">
+          <h2 id="detail-title"></h2>
+          <p><strong>Género:</strong> <span id="detail-genre"></span></p>
+          <p><strong>Duración:</strong> <span id="detail-duration"></span></p>
+          <p><strong>Descripción:</strong></p>
+          <p id="detail-description"></p>
+          <button class="back-button" onclick="goBack()">← Regresar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Reelix 2025 ©</p>
+    </div>
+    <script src="../js/movies.js"></script>
+    <script src="../js/content.js"></script>
+  </body>
+</html>

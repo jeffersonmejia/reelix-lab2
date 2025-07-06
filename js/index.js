@@ -2,7 +2,8 @@ const d = document,
   $video = d.querySelector('video'),
   $counter = d.querySelector('.counter')
 
-let isiPhone = /iPhone|iPad|iPod/i.test(navigator.userAgent)
+let isiPhone = /iPhone|iPad|iPod/i.test(navigator.userAgent),
+  hiddeVideoStarted = false
 
 //FUNCIONES
 function hiddeVideo() {
@@ -77,11 +78,27 @@ function activateSound() {
 
 function enableEvents() {
   d.addEventListener('click', activateSound)
-  d.addEventListener('scroll', activateSound)
+  d.addEventListener('scroll', () => {
+    if ($video.muted) {
+      activateSound()
+    }
+    checkScrollForPiP()
+  })
   d.addEventListener('touchstart', activateSound)
 }
 
-let hiddeVideoStarted = false
+function checkScrollForPiP() {
+  const scrollPosition = window.scrollY + window.innerHeight
+  const documentHeight = document.documentElement.scrollHeight
+
+  if (scrollPosition >= documentHeight / 2) {
+    $video.classList.add('video-pip')
+    $video.controls = false
+  } else {
+    $video.classList.remove('video-pip')
+    $video.controls = true
+  }
+}
 
 //RESTRICCIÓN SAFARI REPRODUCCIÓN AUTOMÁTICA
 $video.addEventListener('playing', () => {

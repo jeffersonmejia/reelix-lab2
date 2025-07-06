@@ -1,0 +1,7 @@
+.stars {
+  color: gold;
+  font-size: 20px;
+  margin-top: 5px;
+  cursor: pointer;
+  user-select: none;
+}
