@@ -69,6 +69,10 @@ nav li:first-child {
 nav li:last-child {
   margin-left: auto;
 }
+nav .btn-primary {
+  width: 100%;
+  text-decoration: none;
+}
 
 nav li:nth-child(2) {
   flex-grow: 1;

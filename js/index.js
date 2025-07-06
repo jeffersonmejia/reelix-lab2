@@ -95,5 +95,4 @@ $video.addEventListener('playing', () => {
 
 d.addEventListener('DOMContentLoaded', (e) => {
   toogleLogo()
-  d.click()
 })
