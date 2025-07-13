@@ -127,8 +127,8 @@ video {
   justify-content: center;
   height: 99vh;
   width: 100%;
-  animation: jump 1s forwards ease-in-out 4s;
-  transition: opacity 0.3s ease-in-out;
+  animation: jump 1s forwards cubic-bezier(0.77, 0, 0.175, 1) 4s;
+  transition: opacity 0.3s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .logo-home-animation svg {
