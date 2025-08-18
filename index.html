@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- METADATA -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- OG: PREVIEW -->
+    <meta property="og:title" content="Reelix" />
+    <meta
+      property="og:description"
+      content="Disfruta de tus series y películas favoritas"
+    />
+    <meta
+      property="og:image"
+      content="https://jeffersonmejia.github.io/reelix-app/img/og-preview.png"
+    />
+    <meta
+      property="og:url"
+      content="https://jeffersonmejia.github.io/reelix-app/"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Reelix" />
+    <!-- TITLE, FAVICON -->
+    <title>Reelix: series y películas online</title>
+    <link
+      rel="shortcut icon"
+      href="img/icons/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- STYLES -->
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body class="body-start">
+    <nav class="opacity-hidden">
+      <ul>
+        <li>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="216"
+            height="86"
+            viewBox="0 0 216 86"
+            fill="none"
+            class="logo"
+          >
+            <path
+              d="M71.6313 27.875H81.1704C83.3891 27.875 85.2485 28.2656 86.7485 29.0469C88.2641 29.8281 89.4048 30.9844 90.1704 32.5156C90.9516 34.0312 91.3423 35.8984 91.3423 38.1172C91.3423 39.6797 91.0844 41.1094 90.5688 42.4062C90.0532 43.6875 89.3032 44.7812 88.3188 45.6875C87.3344 46.5781 86.1391 47.2422 84.7329 47.6797L83.561 48.1719H75.0532L75.0063 44.4922H81.1235C82.436 44.4922 83.5298 44.2109 84.4048 43.6484C85.2798 43.0703 85.936 42.2969 86.3735 41.3281C86.811 40.3594 87.0298 39.2891 87.0298 38.1172C87.0298 36.8047 86.8344 35.6562 86.4438 34.6719C86.0532 33.6875 85.4282 32.9297 84.5688 32.3984C83.7251 31.8516 82.5923 31.5781 81.1704 31.5781H75.9438V62H71.6313V27.875ZM88.0141 62L81.2173 46.5312L85.6938 46.5078L92.6313 61.7188V62H88.0141ZM115.459 58.3203V62H100.647V58.3203H115.459ZM101.42 27.875V62H97.1079V27.875H101.42ZM113.467 42.5469V46.2266H100.647V42.5469H113.467ZM115.225 27.875V31.5781H100.647V27.875H115.225ZM139.319 58.3203V62H124.506V58.3203H139.319ZM125.28 27.875V62H120.967V27.875H125.28ZM137.327 42.5469V46.2266H124.506V42.5469H137.327ZM139.084 27.875V31.5781H124.506V27.875H139.084ZM162.522 58.3203V62H148.366V58.3203H162.522ZM149.139 27.875V62H144.827V27.875H149.139ZM172.155 27.875V62H167.842V27.875H172.155ZM183.217 27.875L189.686 40.9531L196.108 27.875H201.124L192.241 44.7734L201.311 62H196.249L189.686 48.6641L183.1 62H178.014L187.108 44.7734L178.202 27.875H183.217Z"
+              fill="#0CEB8B"
+            />
+            <rect
+              x="13"
+              y="27"
+              width="48"
+              height="35"
+              rx="17.5"
+              fill="#0CEB8B"
+            />
+            <path
+              d="M49.1223 45.2465L31.0162 55.4529L31.2302 34.6694L49.1223 45.2465Z"
+              fill="#13141B"
+            />
+          </svg>
+        </li>
+        <li class="signup-btn">
+          <a href="signup.html">Registrarse</a>
+        </li>
+        <li class="signin-btn">
+          <a href="signin.html" class="btn-primary">Ingresar</a>
+        </li>
+      </ul>
+    </nav>
+    <header class="opacity-hidden">
+      <figure>
+        <img src="img/cover/cover.webp" alt="cover-header" />
+        <figcaption>
+          <p>
+            Adolescentes enfrentan el dolor y el silencio para revelar la
+            verdad.
+          </p>
+          <h1>
+            <span> Todo parece </span>
+            <span>Más díficil.</span>
+          </h1>
+        </figcaption>
+      </figure>
+      <video
+        id="myVideo"
+        src="video/13_reasons_trailer.mp4"
+        muted
+        autoplay
+        controls
+        preload="auto"
+        playsinline
+        class=""
+      ></video>
+      <small class="counter"></small>
+      <button hidden id="hidden-btn"></button>
+    </header>
+    <main class="opacity-hidden">
+      <section class="section-movies">
+        <h2>Todo en un solo lugar</h2>
+        <figure class="gallery">
+          <img src="img/movies/portada1.png" alt="Portada de Spider-Man" />
+          <img
+            src="img/movies/portada3.png"
+            alt="Portada de Rápidos y Furiosos"
+          />
+          <img src="img/movies/portada4.png" alt="Portada de The Last of Us" />
+          <img src="img/movies/portada5.png" alt="Portada de No respires" />
+          <img
+            src="img/movies/portada6.png"
+            alt="Portada de Cosmos: Mundos Posibles"
+          />
+          <img
+            src="img/movies/portada7.png"
+            alt="Portada de La teoría del todo"
+          />
+          <img src="img/movies/portada8.png" alt="Portada de It" />
+          <img
+            src="img/movies/portada9.png"
+            alt="Portada de Esta abuela es un peligro"
+          />
+
+          <img src="img/movies/portada1.png" alt="" />
+          <img src="img/movies/portada3.png" alt="" />
+          <img src="img/movies/portada4.png" alt="" />
+          <img src="img/movies/portada5.png" alt="" />
+          <img src="img/movies/portada6.png" alt="" />
+          <img src="img/movies/portada7.png" alt="" />
+          <img src="img/movies/portada8.png" alt="" />
+          <img src="img/movies/portada9.png" alt="" />
+        </figure>
+      </section>
+      <section class="plans-section">
+        <h2>Planes</h2>
+        <article>
+          <hgroup>
+            <h3>Individual</h3>
+            <h3 class="plan-number-members">1 miembro</h3>
+          </hgroup>
+          <ul>
+            <li>
+              <h4>$3.49 por mes</h4>
+            </li>
+
+            <li>
+              <!-- check -->
+              <svg
+                width="1em"
+                height="1em"
+                fill="none"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="#fff"
+                  fill-rule="evenodd"
+                  d="M19.03 7.47a.75.75 0 0 1 0 1.06l-8 8a.75.75 0 0 1-1.06 0l-4.5-4.5a.75.75 0 1 1 1.06-1.06l3.97 3.97 7.47-7.47a.75.75 0 0 1 1.06 0"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span>Acceso al contenido estandar</span>
+            </li>
+            <li>
+              <!-- check -->
+              <svg
+                width="1em"
+                height="1em"
+                fill="none"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="#fff"
+                  fill-rule="evenodd"
+                  d="M19.03 7.47a.75.75 0 0 1 0 1.06l-8 8a.75.75 0 0 1-1.06 0l-4.5-4.5a.75.75 0 1 1 1.06-1.06l3.97 3.97 7.47-7.47a.75.75 0 0 1 1.06 0"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span>Calidad SD</span>
+            </li>
+            <li>
+              <!-- X -->
+              <svg
+                width="1em"
+                height="1em"
+                fill="none"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                class="check-bad"
+              >
+                <path
+                  fill="#fff"
+                  fill-rule="evenodd"
+                  d="M5.47 5.47a.75.75 0 0 1 1.06 0l12 12a.75.75 0 1 1-1.06 1.06l-12-12a.75.75 0 0 1 0-1.06"
+                  clip-rule="evenodd"
+                ></path>
+                <path
+                  fill="#fff"
+                  fill-rule="evenodd"
+                  d="M18.53 5.47a.75.75 0 0 1 0 1.06l-12 12a.75.75 0 0 1-1.06-1.06l12-12a.75.75 0 0 1 1.06 0"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span>Calidad HD, FHD</span>
+            </li>
+            <li>
+              <!-- X -->
+              <svg
+                width="1em"
+                height="1em"
+                fill="none"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                class="check-bad"
+              >
+                <path
+                  fill="#fff"
+                  fill-rule="evenodd"
+                  d="M5.47 5.47a.75.75 0 0 1 1.06 0l12 12a.75.75 0 1 1-1.06 1.06l-12-12a.75.75 0 0 1 0-1.06"
+                  clip-rule="evenodd"
+                ></path>
+                <path
+                  fill="#fff"
+                  fill-rule="evenodd"
+                  d="M18.53 5.47a.75.75 0 0 1 0 1.06l-12 12a.75.75 0 0 1-1.06-1.06l12-12a.75.75 0 0 1 1.06 0"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span>Acceso exclusivo a nuevos estrenos</span>
+            </li>
+            <li>
+              <!-- X -->
+              <svg
+                width="1em"
+                height="1em"
+                fill="none"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                class="check-bad"
+              >
+                <path
+                  fill="#fff"
+                  fill-rule="evenodd"
+                  d="M5.47 5.47a.75.75 0 0 1 1.06 0l12 12a.75.75 0 1 1-1.06 1.06l-12-12a.75.75 0 0 1 0-1.06"
+                  clip-rule="evenodd"
+                ></path>
+                <path
+                  fill="#fff"
+                  fill-rule="evenodd"
+                  d="M18.53 5.47a.75.75 0 0 1 0 1.06l-12 12a.75.75 0 0 1-1.06-1.06l12-12a.75.75 0 0 1 1.06 0"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span>Bloqueo de anuncios</span>
+            </li>
+          </ul>
+          <a href="signup.html" class="btn-primary">Comprar</a>
+        </article>
+
+        <article>
+          <hgroup>
+            <h3>Dúo</h3>
+            <h3 class="plan-number-members">2 miembros</h3>
+          </hgroup>
+          <ul>
+            <li>
+              <h4>$7.49 por mes</h4>
+            </li>
+
+            <li>
+              <svg
+                width="1em"
+                height="1em"
+                fill="none"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="#fff"
+                  fill-rule="evenodd"
+                  d="M19.03 7.47a.75.75 0 0 1 0 1.06l-8 8a.75.75 0 0 1-1.06 0l-4.5-4.5a.75.75 0 1 1 1.06-1.06l3.97 3.97 7.47-7.47a.75.75 0 0 1 1.06 0"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span> Acceso al contenido estandar</span>
+            </li>
+            <li>
+              <svg
+                width="1em"
+                height="1em"
+                fill="none"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="#fff"
+                  fill-rule="evenodd"
+                  d="M19.03 7.47a.75.75 0 0 1 0 1.06l-8 8a.75.75 0 0 1-1.06 0l-4.5-4.5a.75.75 0 1 1 1.06-1.06l3.97 3.97 7.47-7.47a.75.75 0 0 1 1.06 0"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span> Calidad SD </span>
+            </li>
+            <li>
+              <svg
+                width="1em"
+                height="1em"
+                fill="none"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="#fff"
+                  fill-rule="evenodd"
+                  d="M19.03 7.47a.75.75 0 0 1 0 1.06l-8 8a.75.75 0 0 1-1.06 0l-4.5-4.5a.75.75 0 1 1 1.06-1.06l3.97 3.97 7.47-7.47a.75.75 0 0 1 1.06 0"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span>Acceso exclusivo a nuevos estrenos</span>
+            </li>
+            <li>
+              <svg
+                width="1em"
+                height="1em"
+                fill="none"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                class="check-bad"
+              >
+                <path
+                  fill="#fff"
+                  fill-rule="evenodd"
+                  d="M5.47 5.47a.75.75 0 0 1 1.06 0l12 12a.75.75 0 1 1-1.06 1.06l-12-12a.75.75 0 0 1 0-1.06"
+                  clip-rule="evenodd"
+                ></path>
+                <path
+                  fill="#fff"
+                  fill-rule="evenodd"
+                  d="M18.53 5.47a.75.75 0 0 1 0 1.06l-12 12a.75.75 0 0 1-1.06-1.06l12-12a.75.75 0 0 1 1.06 0"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span> Calidad HD, FHD </span>
+            </li>
+
+            <li>
+              <svg
+                width="1em"
+                height="1em"
+                fill="none"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                class="check-bad"
+              >
+                <path
+                  fill="#fff"
+                  fill-rule="evenodd"
+                  d="M5.47 5.47a.75.75 0 0 1 1.06 0l12 12a.75.75 0 1 1-1.06 1.06l-12-12a.75.75 0 0 1 0-1.06"
+                  clip-rule="evenodd"
+                ></path>
+                <path
+                  fill="#fff"
+                  fill-rule="evenodd"
+                  d="M18.53 5.47a.75.75 0 0 1 0 1.06l-12 12a.75.75 0 0 1-1.06-1.06l12-12a.75.75 0 0 1 1.06 0"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span> Bloqueo de anuncios </span>
+            </li>
+          </ul>
+          <a href="signup.html" class="btn-primary">Comprar</a>
+        </article>
+        <article>
+          <hgroup>
+            <h3>Familiar</h3>
+            <h3 class="plan-number-members">4 miembros</h3>
+          </hgroup>
+          <ul>
+            <li>
+              <h4>$11.99 por mes</h4>
+            </li>
+
+            <li>
+              <!-- check -->
+              <svg
+                width="1em"
+                height="1em"
+                fill="none"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="#fff"
+                  fill-rule="evenodd"
+                  d="M19.03 7.47a.75.75 0 0 1 0 1.06l-8 8a.75.75 0 0 1-1.06 0l-4.5-4.5a.75.75 0 1 1 1.06-1.06l3.97 3.97 7.47-7.47a.75.75 0 0 1 1.06 0"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span>Acceso al contenido estandar</span>
+            </li>
+            <li>
+              <!-- check -->
+              <svg
+                width="1em"
+                height="1em"
+                fill="none"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="#fff"
+                  fill-rule="evenodd"
+                  d="M19.03 7.47a.75.75 0 0 1 0 1.06l-8 8a.75.75 0 0 1-1.06 0l-4.5-4.5a.75.75 0 1 1 1.06-1.06l3.97 3.97 7.47-7.47a.75.75 0 0 1 1.06 0"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span>Calidad SD</span>
+            </li>
+            <li>
+              <!-- check -->
+              <svg
+                width="1em"
+                height="1em"
+                fill="none"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="#fff"
+                  fill-rule="evenodd"
+                  d="M19.03 7.47a.75.75 0 0 1 0 1.06l-8 8a.75.75 0 0 1-1.06 0l-4.5-4.5a.75.75 0 1 1 1.06-1.06l3.97 3.97 7.47-7.47a.75.75 0 0 1 1.06 0"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span>Calidad HD, FHD</span>
+            </li>
+            <li>
+              <!-- check -->
+              <svg
+                width="1em"
+                height="1em"
+                fill="none"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="#fff"
+                  fill-rule="evenodd"
+                  d="M19.03 7.47a.75.75 0 0 1 0 1.06l-8 8a.75.75 0 0 1-1.06 0l-4.5-4.5a.75.75 0 1 1 1.06-1.06l3.97 3.97 7.47-7.47a.75.75 0 0 1 1.06 0"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span>Acceso exclusivo a nuevos estrenos</span>
+            </li>
+            <li>
+              <!-- check -->
+              <svg
+                width="1em"
+                height="1em"
+                fill="none"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="#fff"
+                  fill-rule="evenodd"
+                  d="M19.03 7.47a.75.75 0 0 1 0 1.06l-8 8a.75.75 0 0 1-1.06 0l-4.5-4.5a.75.75 0 1 1 1.06-1.06l3.97 3.97 7.47-7.47a.75.75 0 0 1 1.06 0"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span>Bloqueo de anuncios</span>
+            </li>
+          </ul>
+          <a href="signup.html" class="btn-primary">Comprar</a>
+        </article>
+      </section>
+    </main>
+    <footer class="opacity-hidden">
+      <small>Reelix 2025 ©</small>
+    </footer>
+    <figure class="logo-home-animation">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="216"
+        height="86"
+        viewBox="0 0 216 86"
+        fill="none"
+      >
+        <path
+          class="draw-path"
+          d="M71.6313 27.875H81.1704C83.3891 27.875 85.2485 28.2656 86.7485 29.0469C88.2641 29.8281 89.4048 30.9844 90.1704 32.5156C90.9516 34.0312 91.3423 35.8984 91.3423 38.1172C91.3423 39.6797 91.0844 41.1094 90.5688 42.4062C90.0532 43.6875 89.3032 44.7812 88.3188 45.6875C87.3344 46.5781 86.1391 47.2422 84.7329 47.6797L83.561 48.1719H75.0532L75.0063 44.4922H81.1235C82.436 44.4922 83.5298 44.2109 84.4048 43.6484C85.2798 43.0703 85.936 42.2969 86.3735 41.3281C86.811 40.3594 87.0298 39.2891 87.0298 38.1172C87.0298 36.8047 86.8344 35.6562 86.4438 34.6719C86.0532 33.6875 85.4282 32.9297 84.5688 32.3984C83.7251 31.8516 82.5923 31.5781 81.1704 31.5781H75.9438V62H71.6313V27.875ZM88.0141 62L81.2173 46.5312L85.6938 46.5078L92.6313 61.7188V62H88.0141ZM115.459 58.3203V62H100.647V58.3203H115.459ZM101.42 27.875V62H97.1079V27.875H101.42ZM113.467 42.5469V46.2266H100.647V42.5469H113.467ZM115.225 27.875V31.5781H100.647V27.875H115.225ZM139.319 58.3203V62H124.506V58.3203H139.319ZM125.28 27.875V62H120.967V27.875H125.28ZM137.327 42.5469V46.2266H124.506V42.5469H137.327ZM139.084 27.875V31.5781H124.506V27.875H139.084ZM162.522 58.3203V62H148.366V58.3203H162.522ZM149.139 27.875V62H144.827V27.875H149.139ZM172.155 27.875V62H167.842V27.875H172.155ZM183.217 27.875L189.686 40.9531L196.108 27.875H201.124L192.241 44.7734L201.311 62H196.249L189.686 48.6641L183.1 62H178.014L187.108 44.7734L178.202 27.875H183.217Z"
+          stroke="#0CEB8B"
+          stroke-width="2"
+          fill="#0CEB8B"
+        />
+        <rect
+          x="13"
+          y="27"
+          width="48"
+          height="35"
+          rx="17.5"
+          stroke="#0CEB8B"
+          stroke-width="2"
+          fill="#0CEB8B"
+          class="draw-rect"
+        />
+        <path
+          class="draw-path"
+          d="M49.1223 45.2465L31.0162 55.4529L31.2302 34.6694L49.1223 45.2465Z"
+          stroke="#13141B"
+          stroke-width="2"
+          fill="#13141B"
+        />
+      </svg>
+    </figure>
+    <script src="js/index.js"></script>
+  </body>
+</html>

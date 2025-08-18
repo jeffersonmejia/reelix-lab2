@@ -1,0 +1,70 @@
+/* VAR */
+:root {
+  --primary-bg-color: #13141b;
+  --primary-text-color: #fff;
+  --primary-box-color: #282e3a;
+  --primary-btn-color: #0ceb8b;
+  --primary-border-radius: 4px;
+  --secondary-border-radius: 24px;
+  --danger-color: red;
+}
+
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+/* STYLES */
+
+body {
+  background-color: var(--primary-bg-color);
+  color: white;
+  font-family: 'Sansation', sans-serif;
+}
+
+input {
+  border: none;
+  background-color: rgb(48, 48, 48);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+fieldset {
+  border: none;
+}
+
+form a {
+  text-decoration: none;
+  color: rgb(173, 173, 173);
+  font-size: 0.8rem;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+form select {
+  background-color: rgb(48, 48, 48);
+  padding: 0.5rem;
+  color: white;
+  border: none;
+}
+
+.fieldset-gender {
+  flex-direction: row;
+  padding: 0.5rem 0;
+}
+
+.input-group-profile-pic {
+  flex-direction: row;
+}
+
+.input-group-profile-pic input {
+  width: 9rem;
+}

@@ -1,0 +1,303 @@
+main {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  overflow-y: hidden;
+}
+
+img {
+  height: 100%;
+}
+
+form {
+  width: 90%;
+  /* margin-left: 6rem; */
+  margin: auto;
+  margin-top: 3rem;
+  padding: 1.5rem;
+  border-radius: 4px;
+  background-color: rgb(39, 39, 39);
+}
+
+form legend {
+  padding-bottom: 1rem;
+}
+
+form fieldset {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+form input[type='submit'] {
+  cursor: pointer;
+}
+
+form span {
+  font-size: 0.8rem;
+}
+
+.tarjet {
+  height: 10rem;
+  width: 15rem;
+}
+
+.fieldset-gender {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.fieldset-gender .input-group {
+  display: flex;
+  font-size: 0.8rem;
+  gap: 0.1rem;
+}
+.gallery {
+  width: 95%;
+  background-color: #13151d;
+  padding-right: 4rem;
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 40px;
+}
+
+.gallery .title {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.gallery-row {
+  display: flex;
+  gap: 15px;
+}
+
+.gallery-row--single {
+  justify-content: center;
+}
+
+.gallery-row--triple {
+  justify-content: space-between;
+}
+
+.gallery__picture {
+  flex: 1;
+}
+
+.gallery-row--single .gallery__picture {
+  flex: 0 1 80%;
+  width: 100%;
+}
+
+.gallery__img {
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* TRANSICIONES BÁSICAS */
+form input,
+form select,
+form input[type='color'],
+form input[type='date'],
+form input[type='file'],
+form input[type='password'],
+form input[type='email'],
+form input[type='text'],
+form input[type='submit'] {
+  transition: all 0.3s ease;
+}
+
+form input:focus,
+form select:focus {
+  outline: none;
+  transform: scale(1.02);
+  box-shadow: 0 0 5px #0ceb8b;
+}
+
+form input[type='submit']:hover {
+  background-color: #444;
+  transform: scale(1.05);
+}
+
+/* ANIMACIONES PARA LOS PLANES */
+.plan-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.plans-section {
+  background-color: #11131a;
+  padding: 3rem 2rem;
+  color: white;
+  text-align: center;
+}
+
+.step-buttons {
+  margin-top: 0.3rem;
+  grid-column: 1/-1;
+}
+
+.translated-box {
+  transform: translateX(-5%);
+  opacity: 0;
+}
+
+.primary-btn {
+  align-self: start;
+  margin: 0;
+  margin-right: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: #00ff9d;
+  margin-right: auto;
+}
+
+form {
+  opacity: 1;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+}
+form h2 {
+  font-size: 1.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.plans-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.plans-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.plan-card {
+  background-color: #1a1c23;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 300px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.plan-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.plan-card .price {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.plan-card .features {
+  list-style: none;
+  padding-left: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.buy-button {
+  background-color: #00ff9d;
+  color: black;
+  font-weight: bold;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.buy-button:hover {
+  background-color: #00cc7a;
+}
+
+/* pago  */
+.payment-methods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.payment-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #1a1c23;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.payment-label {
+  font-size: 0.9rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.payment-option:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 2px 2px #00cc7a;
+}
+
+.payment-label input[type='radio'] {
+  accent-color: #00ff9d;
+  transform: scale(1.2);
+}
+
+.met-pag {
+  padding: 1rem;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #0f0f0f;
+  font-family: 'Sansation', sans-serif;
+  color: white;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.step {
+  width: 100%;
+  max-width: 700px;
+}
+
+@media (max-width: 600px) {
+  form fieldset {
+    grid-template-columns: 1fr;
+  }
+
+  .fieldset-gender {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  form input[type='submit'],
+  form a {
+    grid-column: auto;
+  }
+}

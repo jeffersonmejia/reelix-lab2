@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reelix - Registro</title>
+    <link
+      rel="shortcut icon"
+      href="img/icons/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansation:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/reset_form.css" />
+    <link rel="stylesheet" href="styles/signup.css" />
+    <style>
+      .step {
+        display: none;
+      }
+      .step.active {
+        display: block;
+      }
+      .step-buttons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 0.5rem;
+      }
+      .step-buttons button {
+        padding: 0.6rem 1.5rem;
+        border: none;
+        background-color: #00ff9d;
+        color: black;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      .step-buttons button:hover {
+        background-color: #00cc7a;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <!-- Paso 1: Registro -->
+      <section class="form-section step active" id="step-1">
+        <form id="signup-form" class="translated-box">
+          <fieldset>
+            <legend class="title-form-1"><h2>Registro</h2></legend>
+            <input
+              type="text"
+              name="name"
+              placeholder="Nombre completo"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Correo electrónico"
+              required
+            />
+            <input
+              type="password"
+              name="password"
+              placeholder="Contraseña"
+              required
+            />
+            <input
+              type="password"
+              name="confirm-password"
+              placeholder="Confirmar contraseña"
+              required
+            />
+            <select name="country" required>
+              <option value="">Selecciona tu país</option>
+              <option value="ec">Ecuador</option>
+              <option value="pe">Perú</option>
+              <option value="co">Colombia</option>
+              <option value="cl">Chile</option>
+            </select>
+            <div class="fieldset-gender">
+              <label>Género</label>
+              <div class="input-group">
+                <input
+                  type="radio"
+                  name="gender"
+                  id="masculino"
+                  value="masculino"
+                />
+                <label for="masculino">Masculino</label>
+              </div>
+              <div class="input-group">
+                <input
+                  type="radio"
+                  name="gender"
+                  id="femenino"
+                  value="femenino"
+                />
+                <label for="femenino">Femenino</label>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="birthdate">Fecha de nacimiento</label>
+              <input type="date" name="birthdate" id="birthdate" required />
+            </div>
+            <div class="input-group input-group-profile-pic">
+              <label for="profile-pic">Foto de perfil</label>
+              <input type="file" name="profile-pic" id="profile-pic" />
+            </div>
+            <div class="input-group">
+              <input type="checkbox" name="terms" required />
+              <span>Acepto los <a href="#">términos y condiciones</a></span>
+            </div>
+
+            <div class="step-buttons">
+              <a href="./" class="primary-btn">Inicio</a>
+              <button type="button" onclick="nextStep()">Siguiente</button>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+
+      <!-- Paso 2: Planes -->
+      <section class="plans-section step" id="step-2">
+        <h2>Elige tu plan</h2>
+        <div class="plans-container">
+          <div class="plan-card">
+            <h3>Básico</h3>
+            <p class="price">$3.49 / mes</p>
+            <ul class="features">
+              <li>✓ Contenido estándar</li>
+              <li>✓ Calidad SD</li>
+              <li>✗ HD y FHD</li>
+              <li>✗ Estrenos exclusivos</li>
+              <li>✗ Sin anuncios</li>
+            </ul>
+            <button class="buy-button" onclick="selectPlan('básico')">
+              Seleccionar
+            </button>
+          </div>
+
+          <div class="plan-card">
+            <h3>Standard</h3>
+            <p class="price">$7.49 / mes</p>
+            <ul class="features">
+              <li>✓ Contenido estándar</li>
+              <li>✓ Calidad SD</li>
+              <li>✓ Calidad HD y FHD</li>
+              <li>✓ Estrenos exclusivos</li>
+              <li>✗ Sin anuncios</li>
+            </ul>
+            <button class="buy-button" onclick="selectPlan('standard')">
+              Seleccionar
+            </button>
+          </div>
+
+          <div class="plan-card">
+            <h3>Premium</h3>
+            <p class="price">$11.99 / mes</p>
+            <ul class="features">
+              <li>✓ Contenido estándar</li>
+              <li>✓ SD, HD y FHD</li>
+              <li>✓ Estrenos exclusivos</li>
+              <li>✓ Sin anuncios</li>
+            </ul>
+            <button class="buy-button" onclick="selectPlan('premium')">
+              Seleccionar
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Paso 3: Método de pago -->
+      <section class="form-section step" id="step-3">
+        <div class="payment-section">
+          <h3 class="met-pag">Método de Pago</h3>
+          <div class="payment-methods">
+            <div class="payment-option">
+              <img src="img/visa.png" alt="Visa" class="tarjet" />
+              <label class="payment-label">
+                <input type="radio" name="payment" value="visa" required />
+                Seleccionar este método
+              </label>
+            </div>
+
+            <div class="payment-option">
+              <img src="img/gold.png" alt="Gold" class="tarjet" />
+              <label class="payment-label">
+                <input type="radio" name="payment" value="gold" required />
+                Seleccionar este método
+              </label>
+            </div>
+
+            <div class="payment-option">
+              <img src="img/mastercad.png" alt="Mastercard" class="tarjet" />
+              <label class="payment-label">
+                <input
+                  type="radio"
+                  name="payment"
+                  value="mastercard"
+                  required
+                />
+                Seleccionar este método
+              </label>
+            </div>
+          </div>
+
+          <div class="step-buttons">
+            <a href="signin.html">
+              <button type="button">Finalizar</button>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/signup.js"></script>
+  </body>
+</html>

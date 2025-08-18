@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reelix: Iniciar sesión</title>
+    <link rel="stylesheet" href="styles/signin.css" />
+  </head>
+  <body>
+    <form
+      id="login-form"
+      class="formulario"
+      action="content/for_you.html"
+      method="get"
+    >
+      <legend>
+        <figure>
+          <img src="img/icons/logo.svg" alt="logo" class="logo" />
+          <h2>Iniciar sesión</h2>
+        </figure>
+      </legend>
+
+      <fieldset>
+        <input
+          type="email"
+          name="email"
+          placeholder="Correo o número de celular"
+          required
+        />
+        <span class="error-message"></span>
+
+        <input
+          type="password"
+          name="password"
+          placeholder="Contraseña"
+          required
+        />
+        <span class="error-message"></span>
+
+        <input type="submit" value="Iniciar Sesión" class="boton-inicio" />
+        <p>O</p>
+        <a href="./index.html" class="back-btn"><small>Volver</small></a>
+      </fieldset>
+    </form>
+
+    <article class="politicas">
+      <h2>Tu plataforma de contenido streaming</h2>
+      <ul>
+        <li>Accede a contenido de calidad</li>
+        <li>Suscríbete a nuestros planes más accesibles</li>
+        <li>Conoce los nuevos estrenos y míralos en exclusivo</li>
+      </ul>
+      <section class="grid-new-movies">
+        <img src="img/movies/portada1.jpg" alt="" class="cover" />
+        <img src="img/movies/portada2.jpeg" alt="" />
+        <img src="img/movies/portada3.jpg" alt="" />
+      </section>
+      <small>Reelix 2025</small>
+    </article>
+
+    <script src="js/signin.js"></script>
+  </body>
+</html>
